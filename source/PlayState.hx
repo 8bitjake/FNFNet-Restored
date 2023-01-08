@@ -2357,7 +2357,7 @@ class PlayState extends MusicBeatState
 		var rightP = controls.RIGHT_P;
 		var downP = controls.DOWN_P;
 		var leftP = controls.LEFT_P;
-
+		if(true) return;
 		if (leftP)
 			noteMiss(0);
 		if (downP)
