@@ -102,6 +102,9 @@ class Alphabet extends FlxSpriteGroup
 
 				var isNumber:Bool = AlphaCharacter.numbers.indexOf(splitWords[loopNum]) != -1;
 				var isSymbol:Bool = AlphaCharacter.symbols.indexOf(splitWords[loopNum]) != -1;
+				trace(splitWords[loopNum]);
+				trace(AlphaCharacter.numbers.indexOf(splitWords[loopNum]));
+				trace(isNumber);
 
 				if (isBold)
 					letter.createBold(character);
@@ -168,7 +171,9 @@ class Alphabet extends FlxSpriteGroup
 			}
 
 			var isNumber:Bool = AlphaCharacter.numbers.indexOf(splitWords[loopNum]) != -1;
-				var isSymbol:Bool = AlphaCharacter.symbols.indexOf(splitWords[loopNum]) != -1;
+			var isSymbol:Bool = AlphaCharacter.symbols.indexOf(splitWords[loopNum]) != -1;
+			trace(splitWords[loopNum]);
+			trace(AlphaCharacter.numbers.indexOf(splitWords[loopNum]));
 
 			if (AlphaCharacter.alphabet.indexOf(splitWords[loopNum].toLowerCase()) != -1 || isNumber || isSymbol)
 				// if (AlphaCharacter.alphabet.contains(splitWords[loopNum].toLowerCase()) || isNumber || isSymbol)
