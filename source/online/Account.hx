@@ -37,6 +37,7 @@ class Account extends MusicBeatState
 		request.onData = function(data:String)
 		{
 			var accdata = Json.parse(data);
+			trace(accdata);
 			if (accdata.banned == 1)
 			{
 				var errore = new Alphabet(0, 0, id == 0 ? "Your account has been banned." : "This account has been banned.", true);
@@ -81,10 +82,13 @@ class Account extends MusicBeatState
 			add(phrase);
 
 			var win = new EzText(100, 255, "\nWins: " + accdata.wins + "\nLoses: " + accdata.loses + "\n", 40, 2);
-			add(win);
+			//add(win);
 
 			var rank = new EzText(100, 450, "Rank: ", 40, 2);
-			add(rank);
+			//add(rank);
+
+			var songPlayed = new EzText(100, 255, "Songs Played: " + accdata.played, 40, 2);
+			add(songPlayed);
 
 			deciderank(accdata.points);
 
