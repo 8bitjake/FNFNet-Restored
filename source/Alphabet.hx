@@ -71,6 +71,7 @@ class Alphabet extends FlxSpriteGroup
 		doSplitWords();
 
 		var xPos:Float = 0;
+		var loopNum:Int = 0;
 		for (character in splitWords)
 		{
 			// if (character.fastCodeAt() == " ")
@@ -132,7 +133,7 @@ class Alphabet extends FlxSpriteGroup
 				lastSprite = letter;
 			}
 
-			// loopNum += 1;
+			loopNum += 1;
 		}
 	}
 
