@@ -98,7 +98,7 @@ class FNFNetMenu extends MusicBeatState{
             errortxt.screenCenter(X);
             add(errortxt);
             eventwheel = new FlxSprite(-150, -200).loadGraphic(Paths.image('eventwheel'));
-            var eventdata = new haxe.Http("http://"+Config.data.resourceaddr+"/event/event.json");
+            var eventdata = new haxe.Http("https://"+Config.data.resourceaddr+"/event/event.json");
             eventdata.onData = (data:Dynamic) -> {
                 var event = haxe.Json.parse(data);
                 if (Date.now().getTime() < event.deadline){

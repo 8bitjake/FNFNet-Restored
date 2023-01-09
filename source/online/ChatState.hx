@@ -68,12 +68,6 @@ class ChatState extends MusicBeatState
         #end
         
         var coly = new Client('ws://' + data.addr + ':' + data.port);
-        FlxG.sound.music.stop();
-        var pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
-		pauseMusic.volume = 30;
-		pauseMusic.play(true, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
-        FlxG.sound.list.add(pauseMusic);
-
         var userlist = new FlxText(FlxG.width - 250, 0, "Users online:\n", 10);
         userlist.setFormat(Paths.font("vcr.ttf"), 18, FlxColor.WHITE, LEFT);
         userlist.setBorderStyle(OUTLINE, FlxColor.BLACK, 1);

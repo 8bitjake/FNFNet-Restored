@@ -1,10 +1,5 @@
 {
     "character":{
-        "camera": {
-            "x": -90,
-            "y": 25 
-        },
-        "flipX": false,
         "size": {
             "width": 0,
             "height": 0
@@ -16,63 +11,63 @@
     },
     "animations": {
         "idle": {
-            "prefix": "bb idle",
+            "prefix": "BF idle dance",
             "offsets": {
                 "x": 0,
-                "y": 0
-            }
-        },
-        "up": {
-            "prefix": "bb up",
-            "offsets": {
-                "x": 0,
-                "y": 0
-            }
-        },
-        "down": {
-            "prefix": "bb down",
-            "offsets": {
-                "x": 0,
-                "y": 0
+                "y": -5
             }
         },
         "left": {
-            "prefix": "bb left",
+            "prefix": "BF NOTE LEFT0",
             "offsets": {
-                "x": 0,
-                "y": 0
+                "x": 12,
+                "y": -6
+            }
+        },
+        "down": {
+            "prefix": "BF NOTE DOWN0",
+            "offsets": {
+                "x": -10,
+                "y": -50
+            }
+        },
+        "up": {
+            "prefix": "BF NOTE UP0",
+            "offsets": {
+                "x": -29,
+                "y": 27
             }
         },
         "right": {
-            "prefix": "bb right",
+            "prefix": "BF NOTE RIGHT0",
             "offsets": {
-                "x": 0,
-                "y": 0
+                "x": -38,
+                "y": -7
             }
         },
-        "upMiss": {
-            "prefix": "bb up",
+        "leftMiss": {
+            "prefix": "BF NOTE LEFT MISS",
             "offsets": {
                 "x": 0,
                 "y": 0
             }
         },
         "downMiss": {
-            "prefix": "bb down",
+            "prefix": "BF NOTE DOWN MISS",
             "offsets": {
                 "x": 0,
                 "y": 0
             }
         },
-        "leftMiss": {
-            "prefix": "bb left",
+        "upMiss": {
+            "prefix": "BF NOTE UP MISS",
             "offsets": {
                 "x": 0,
                 "y": 0
             }
         },
         "rightMiss": {
-            "prefix": "bb right",
+            "prefix": "BF NOTE RIGHT MISS",
             "offsets": {
                 "x": 0,
                 "y": 0

@@ -1,48 +1,48 @@
 {
-    "character":{
+    "character": {
         "size": {
             "width": 0,
             "height": 0
         },
         "position": {
-            "x": "none",
-            "y": null
+            "x": 300,
+            "y": 50
         }
     },
     "animations": {
         "idle": {
-            "prefix": "BF idle dance",
+            "prefix": "Dad idle dance",
             "offsets": {
                 "x": 0,
                 "y": 0
             }
         },
         "up": {
-            "prefix": "BF NOTE UP",
+            "prefix": "Dad Sing Note UP",
             "offsets": {
-                "x": 55,
-                "y": 92
+                "x": -6,
+                "y": 50
             }
         },
         "down": {
-            "prefix": "BF NOTE DOWN",
+            "prefix": "Dad Sing Note DOWN",
             "offsets": {
                 "x": 0,
-                "y": -75
+                "y": -30
             }
         },
         "left": {
-            "prefix": "BF NOTE LEFT",
+            "prefix": "Dad Sing Note LEFT",
             "offsets": {
-                "x": 141,
-                "y": -11
+                "x": -10,
+                "y": 10
             }
         },
         "right": {
-            "prefix": "BF NOTE RIGHT",
+            "prefix": "Dad Sing Note RIGHT",
             "offsets": {
                 "x": 0,
-                "y": -11
+                "y": 27
             }
         }
     }

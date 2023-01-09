@@ -111,17 +111,6 @@ class TitleState extends MusicBeatState
 				StoryMenuState.weekUnlocked[0] = true;
 		}
 
-		#if FREEPLAY
-		FlxG.switchState(new FreeplayState());
-		#elseif CHARTING
-		FlxG.switchState(new ChartingState());
-		#else
-		new FlxTimer().start(1, function(tmr:FlxTimer)
-		{
-			startIntro();
-		});
-		#end
-
 		#if desktop
 		DiscordClient.initialize();
 		
@@ -129,6 +118,14 @@ class TitleState extends MusicBeatState
 			cpp.Lib.print("See you next time!\n");
 			DiscordClient.shutdown();
 		 });
+		#end
+
+		#if FREEPLAY
+		FlxG.switchState(new FreeplayState());
+		#elseif CHARTING
+		FlxG.switchState(new ChartingState());
+		#else
+		startIntro();
 		#end
 		//Application.current.onWindowMove((x:Float, y:Float) -> {});\
 	}
@@ -163,15 +160,15 @@ class TitleState extends MusicBeatState
 			// FlxG.sound.list.add(music);
 			// music.play();
 			var now = Date.now();
-			trace(now.getHours());
-			if(now.getHours() >= 18) {
-				FlxG.sound.playMusic(Paths.music('freakyNight'), 0);
-				Conductor.changeBPM(117);
-			}
-			else {
-				FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
-				Conductor.changeBPM(102);
-			}
+            trace(now.getHours());
+            if((now.getHours() >= 18)||(FlxG.save.data.nightmusic)) {
+                FlxG.sound.playMusic(Paths.music('freakyNight'));
+                Conductor.changeBPM(117);
+            }
+            else {
+                FlxG.sound.playMusic(Paths.music('freakyMenu'));
+                Conductor.changeBPM(102);
+            }
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 

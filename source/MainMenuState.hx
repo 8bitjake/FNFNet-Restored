@@ -40,7 +40,7 @@ class MainMenuState extends MusicBeatState
 		if (!FlxG.sound.music.playing){
             var now = Date.now();
             trace(now.getHours());
-            if(now.getHours() >= 18) {
+            if((now.getHours() >= 18)||(FlxG.save.data.nightmusic)) {
                 FlxG.sound.playMusic(Paths.music('freakyNight'));
                 Conductor.changeBPM(117);
             }

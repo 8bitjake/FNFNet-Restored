@@ -89,6 +89,7 @@ class OptionsMenu extends MusicBeatState
 			"Instant Restart",
 			"Inst Volume",
 			"Vocal Volume",
+			"Always Play Night Music",
 			"Reset Settings",
 			"Load Custom Assets",
 			"Logout",
@@ -113,6 +114,7 @@ class OptionsMenu extends MusicBeatState
 			"If you should restart when you die.",
 			"How loud instrumental should be.",
 			"How loud vocals should be.",
+			"Play chill menu music at all times instead of past 6 PM.",
 			"Reset all your settings.",
 			"Choose if the game should load custom stages/characters.",
 			"Logout of your account.",
@@ -231,6 +233,7 @@ class OptionsMenu extends MusicBeatState
 			Std.string(FlxG.save.data.instres),
 			"" + FlxG.save.data.instvolume,
 			"" + FlxG.save.data.vocalsvolume,
+			"" + FlxG.save.data.nightmusic,
 			"",
 			"" + FlxG.save.data.loadass,
 			"",
@@ -312,7 +315,7 @@ class OptionsMenu extends MusicBeatState
 						FlxG.save.flush();
 						initSettings(false, 0, "" + FlxG.save.data.vocalsvolume);
 					}
-				}
+				}				
 		}
 		if (controls.ACCEPT && !block && !isBinding)
 		{
@@ -362,6 +365,10 @@ class OptionsMenu extends MusicBeatState
 					FlxG.save.data.midscroll = !FlxG.save.data.midscroll;
 					FlxG.save.flush();
 					initSettings(false, 4, "" + FlxG.save.data.midscroll);
+				case "Always Play Night Music":
+					FlxG.save.data.nightmusic = !FlxG.save.data.nightmusic;
+					FlxG.save.flush();
+					initSettings(false, 5, "" + FlxG.save.data.nightmusic);
 				case "Keyboard Scheme":
 					switch (kbd)
 					{
@@ -637,7 +644,7 @@ class OptionsMenu extends MusicBeatState
 			case 2:
 				['< category >', 'Left', 'Down', 'Up', 'Right'];
 			case 3:
-				['< category >', 'Inst Volume', 'Vocal Volume'];
+				['< category >', 'Inst Volume', 'Vocal Volume', 'Always Play Night Music'];
 			case 4:
 				['< category >', 'Scripts', #if !js 'Stage Tester', #end 'Reset Settings', acctab];
 			case _:
